@@ -1,0 +1,121 @@
+@import url('style.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  background-color: #1e1e2f;
+  padding: 15px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Container */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #1e4d91;
+  margin-bottom: 30px;
+}
+
+/* Form Styles */
+form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+input[type="submit"] {
+  width: 100%;
+  background-color: #1e4d91;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+  background-color: #15386b;
+}
+
+/* Error Message */
+#formError {
+  color: red;
+  font-size: 0.9rem;
+  height: 1.2rem;
+}
+
+/* Game List */
+.list-title {
+  margin-top: 40px;
+  color: #1e4d91;
+  text-align: center;
+}
+#gameList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+#gameList li {
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #f0f4ff;
+  border-left: 5px solid #1e4d91;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#gameList li:hover {
+  transform: translateX(5px);
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e2f;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}

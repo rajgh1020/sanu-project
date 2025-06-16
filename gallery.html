@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Game Library Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">🎮 Game Library Tracker</div>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tracker.html">Tracker</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="dark-toggle" aria-label="Toggle Dark Mode">🌙</button>
+  </header>
+  <main class="container">
+    <h1 class="page-title">🖼️ Game Gallery</h1>
+    <section class="section-card filter-bar">
+      <label for="statusFilter">Filter by status:</label>
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="Completed">Completed</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Wishlist">Wishlist</option>
+      </select>
+    </section>
+    <section class="gallery-grid">
+      <div class="game-card" data-status="Completed">
+        <img src="images/godofwar.png" alt="God of War">
+        <h3>God of War</h3>
+        <p>Status: Completed</p>
+      </div>
+      <div class="game-card" data-status="In Progress">
+        <img src="images/eldenring.png" alt="Elden Ring">
+        <h3>Elden Ring</h3>
+        <p>Status: In Progress</p>
+      </div>
+      <div class="game-card" data-status="Wishlist">
+        <img src="images/starfield.jpg" alt="Starfield">
+        <h3>Starfield</h3>
+        <p>Status: Wishlist</p>
+      </div>
+      <div class="game-card" data-status="Completed">
+        <img src="images/hades.jpeg" alt="Hades">
+        <h3>Hades</h3>
+        <p>Status: Completed</p>
+      </div>
+      <div class="game-card" data-status="Wishlist">
+        <img src="images/final-fantasy.jpg" alt="Final Fantasy XVI">
+        <h3>Final Fantasy XVI</h3>
+        <p>Status: Wishlist</p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Game Library Tracker | Browse your quests 📚
+  </footer>
+  <script>
+    const filter = document.getElementById('statusFilter');
+    const cards = document.querySelectorAll('.game-card');
+    filter.addEventListener('change', () => {
+      const sel = filter.value;
+      cards.forEach(c => {
+        c.style.display = (sel === 'all' || c.dataset.status === sel) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
